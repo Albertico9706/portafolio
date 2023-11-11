@@ -1,0 +1,243 @@
+:root{
+    --primary: rgb(231, 149, 41);
+    --secondary: rgb(135, 33, 182);
+    --primary-dark: rgb(39, 39, 39);
+    --secondary-dark: rgb(97, 97, 97);
+    --gradient: linear-gradient(60deg,gray,black);
+    --gradient2: linear-gradient(60deg,rgb(156, 174, 255),black);
+    --base:16px;
+    --widht-separation:2rem;
+}
+
+html{
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(231, 226, 226);
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--primary-dark);
+    box-sizing: border-box;
+    min-width: 400px;
+    scroll-behavior: smooth;
+   
+}
+
+h1{
+    margin-block-end: 5rem;
+}
+
+h1:hover{
+    text-shadow: 0 0 2px var(--secondary-dark); 
+}
+
+h2{
+    display: block;
+    /* animation: tricolor 3s linear infinite; */
+    position: relative;
+    top: 0;
+}
+
+h1:first-child{
+    font-size:48px;
+}
+
+p{
+    display: block;
+}
+ 
+main>section{
+    border-bottom: 0.5px solid rgb(70, 70, 70);
+    border-bottom-width: 50%;
+    padding-block-end: 4rem;
+}
+
+span{
+    display: block;
+}
+
+footer{
+    text-align-last: end;
+}
+
+main{
+    padding-inline: var(--widht-separation);
+    
+}
+
+
+
+#imaper{border-radius: 50%;
+border: 4px var(--secondary-dark) solid;
+max-width: 280px;
+max-height: 280px;
+
+justify-self: center;
+}
+
+#presentacion{
+    display: flex;
+    place-items: center;
+    flex-direction: row;
+    gap: 2rem; 
+}
+
+
+
+
+
+.aboutme{
+    flex-direction: column;
+    background: #a7fcab;
+    border-radius: 8px;  
+    padding: 1rem;
+    border: 1px solid var(--primary-dark);
+}
+
+.aboutme>p{
+    font-size: 24px;
+}
+
+.bgimage>img{
+ width: 100%;
+ 
+}
+
+.contact{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.clonproyect{
+    color: yellow;
+    display: flex;
+    min-width: 200px;
+    min-height: 200px;
+    transition: .3s linear;
+    justify-content: center;
+    align-items: center;   
+}
+
+.clonproyect:nth-child(even){
+    background: var(--gradient);
+}
+
+.clonproyect:nth-child(odd){
+    background: var(--gradient2);
+}
+.clonproyect:hover{
+    box-shadow: 0 0 15px var(--secondary-dark);
+}
+
+/* .clonproyect:active{
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+} */
+
+.navbar{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    color: aliceblue;
+    background: var(--primary-dark);
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+     
+}
+
+.navbar a{
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    border-left: 4px solid;
+    padding-left: 4px;
+}
+
+.navbar a:first-child{
+    align-self: center; 
+}
+
+.proyectscont{
+    display: grid ;
+    grid-template-columns: repeat(auto-fill, 200px) ;
+    justify-content: space-evenly;
+    max-width:960px;
+    gap:40px;
+    margin: 0 auto;
+}
+
+.proyectscont>div>span{
+    display: block;
+    font-size: 30px;
+}
+
+
+
+.tecno{
+    background: var(--gradient);
+    display: flex;
+    width: 48px;
+    height: 48px;
+    transition: .1s linear;
+    text-align: center;
+    
+}
+
+.tecnologys{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.scaled{
+    border-radius: 10px;
+}
+
+.scaled:hover{
+    transform: scale(1.2);
+}
+
+.sender{
+    background-color: rgb(23, 168, 23);
+    color: azure;
+    border-style: none;
+    font-weight: bold;
+    padding:8px;
+    align-self: flex-end;
+}
+
+.sender:hover{
+    box-shadow: 0 0 3px var(--primary-dark);
+}
+
+
+
+@media  screen and (max-width:800px) {
+    #presentacion{
+        flex-wrap: wrap;
+    }
+    #imaper{
+        position: relative;
+        margin: auto;
+        border-color: red;
+    }
+}
+
+@keyframes tricolor{
+    0%{
+        color: red;
+        font-size: 20px;
+    }
+    50%{color: purple;
+        font-size: 30px;}
+   
+    100%{color: blue;
+        font-size: 20px;}
+}
