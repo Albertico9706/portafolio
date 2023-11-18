@@ -2,25 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Portafolio de Alberto Barrueta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar"><a href="">Home</a> <a href="#contactme">Contact</a></nav>
+    <nav class="navbar"><a href=""><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M3 4H21V6H3V4ZM3 11H15V13H3V11ZM3 18H21V20H3V18Z"></path></svg></div><span>Home</span></a> <a href="#contactme">Contact</a></nav>
     <header class="bgimage" ><img src="images/programming-1873854_640.png" alt="prg"></header>
     <main>
-        <h1>!Bienvenindo a mi portafolio web!</h1>
+        
+        <h1>!Bienvenido a mi portafolio web!</h1>
 
     <section id="presentacion">
+        
 
-        <img src="images/IMG_20210904_204656227.jpg" alt="perfil" id="imaper">
+        <img src="images/IMG_20210904_204656227.png" alt="perfil" id="imaper">
 
         <section class="aboutme">
             <h2>About me</h2>
     
-            <p>Mi nombre es Alberto Barrueta y actualmente soy estudiante de la Univercidad de las Ciencias Informaticas conocida como la Uci, 
-                amante de la programacion web y del uso de las nuevas tecnologias </p>
+            <p>Mi nombre es Alberto Barrueta y actualmente me encuentro cursando la Ingeniería en Ciencias Informaticas, 
+                amante del desarrollo web, del uso de las nuevas tecnologías, de los retos profesionales y del mundo de las IT en general.</p>
         </section>
 
     </section>
@@ -28,7 +31,7 @@
     <h1>Tecnologias</h1>
     <section class="tecnologys">
         
-        <div  class="tecno scaled">1</div>
+        <img  class="tecno scaled" src="images/html-icon.svg"></img>
         <div  class="tecno scaled">2</div>
         <div  class="tecno scaled">3</div>
         <div  class="tecno scaled">4</div>
@@ -44,20 +47,43 @@
     <section class="proyectos">
         
         <div class="proyectscont">
-            <div  class="clonproyect scaled"><span>1</span></div>
-            <div  class="clonproyect scaled"><span>2</span></div>
-            <div  class="clonproyect scaled"><span>3</span></div>
-            <div  class="clonproyect scaled"><span>4</span></div>
-            <div  class="clonproyect scaled"><span>5</span></div>
+            <a href="#contactme" ><img class="clonproyect scaled" src="images/FB_IMG_16289613611679563.jpg" alt="Wasowsky"></a>
+            <a href="#contactme" ><img class="clonproyect scaled" src="images/FB_IMG_16289613611679563.jpg" alt="Wasowsky"></a>
+            <a href="#contactme" ><img class="clonproyect scaled" src="images/FB_IMG_16289613611679563.jpg" alt="Wasowsky"></a> 
+            <a href="#contactme" ><img class="clonproyect scaled" src="images/FB_IMG_16289613611679563.jpg" alt="Wasowsky"></a>
+            <a href="#contactme" ><img class="clonproyect scaled" src="images/FB_IMG_16289613611679563.jpg" alt="Wasowsky"></a>          
         </div>
     </section>
     <section class="contact">
 
-        <h2 id="contactme">Contactame</h2>
-        <span>Facebook</span>
-        <span>Whatsapp</span>
-        <span>Twitter</span>
-        <span>LinkedIn</span>
+        <div>
+            <h2 id="contactme">Contactame</h2>
+            <span>Facebook</span>
+            <span>Whatsapp</span>
+            <span>Twitter</span>
+            <span>LinkedIn</span>
+        </div>
+        <form action="">
+            <legend>Formulario de mensaje</legend>
+            <div>
+                <div>
+                    <label for="text">Nombre:</label>
+                    <label for="phone">Numero:</label>
+                    <label for="email">Email: </label>
+                    <label for="texta">Mensaje:</label> 
+                </div>
+                <div>
+                    <input type="text" id="text">
+                    <input type="number" name="phone" id="phone">
+                    <input type="email" id="email">
+                    <input type="text area" id="texta">
+                </div>
+            </div>
+            
+            
+            <button>Enviar</button>
+
+        </form>
         <button class="sender">Enviame un mensaje</button>
 
     </section>
