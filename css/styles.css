@@ -146,9 +146,10 @@ justify-self: center;
     grid-template-areas:
     "socials . ."
     ". form ." ;
-    margin: 2rem;
+    
     gap: 1rem 5rem;
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns:  repeat(3,320px);
+    padding: 1rem;
 
     
 }
@@ -158,25 +159,30 @@ justify-self: center;
 .contact form{
     
     
-    background:linear-gradient(45deg,var(--aquamarine-300) ,var(--aquamarine-700)80% );
+    background:linear-gradient(145deg,var(--aquamarine-500) ,var(--aquamarine-600)80% );
     
     border-radius: 8px;
     border:1px solid var(--aquamarine-900);
     font-weight:500;
     grid-area:form;
+    padding: 2rem;
+    width: 320px;
+    justify-self: center;
+    
     
 }
 
-.contact>form>div{
-    display: flex;
+.contact>form>legend{
+    margin-bottom: 2rem;
+    font-size: large;
     
 }
 
-.contact  label, .contact  legend,input{
-    margin: 1rem;
+.contact label {
     display: block;
     
 }
+
 
 input:not(:valid){
     color: red;
@@ -186,25 +192,23 @@ input:not(:valid){
     
     color: black;
     background-color: #00db9a;
-    margin: 1rem;
     border: 2px solid var(--aquamarine-900);
-    position: relative;
-    padding-block: 2 rem;
-    width: 90%;
+    margin-block-start: 2rem;
+    padding-block: .5rem;
+    width: 100%;
     
 }
 
 .contact form input{
     border-bottom:1px black solid; 
     border: transparent solid;
-    
     background-color: whitesmoke;
-    
-    margin-inline-start: 1rem;
+    width: 100%;
+    margin-bottom: .3rem;
     
 }
 
-.contact div{
+.contact>div{
     grid-area: socials;
     
 }
@@ -302,27 +306,25 @@ input:active{
 
 
 .tecno{
-    background: var(--gradient);
+    
     display: flex;
     width: 48px;
     height: 48px;
     transition: .1s linear;
     text-align: center;
     
+    
 }
 
-.tecno:first-child{
-    background:none
-}
+
 
 .tecnologys{
     display: flex;
     flex-flow: row wrap;
-    gap:2rem 6rem;
+    gap:4rem 6rem;
     justify-content: space-evenly;
-    
     align-self: center;
-    
+    max-width: 960px;
 }
 
 
@@ -363,12 +365,13 @@ input:active{
     }
 }
 
-@media  screen and (max-width:600px) {
+@media  screen and (max-width:720px) {
     .contact{
-        grid-template-areas: 
-        " socials . ."
-        "form . .";
+        
         grid-template-columns: minmax(320px,1fr) ;
+        grid-template-areas: 
+        " socials"
+        "form ";
     }
     
 }
@@ -383,4 +386,15 @@ input:active{
    
     100%{color: blue;
         font-size: 20px;}
+}
+
+
+label:has(+input:not(:valid)){
+    color: red;
+    
+    
+}
+
+label{
+    transition: all 1s ease;
 }
